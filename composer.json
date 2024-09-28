@@ -1,5 +1,6 @@
 {
 	"name": "paulo-henrique-oliveira-almeida/raven-framework",
+	"version": "0.0.1",
 	"description": "PHP framework inspired in Nest.js",
 	"type": "framework",
 	"license": "mit",

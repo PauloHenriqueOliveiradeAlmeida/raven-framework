@@ -1,0 +1,12 @@
+{
+	"name": "paulo/raven",
+	"description": "PHP framework inspired in Nest.js",
+	"type": "framework",
+	"license": "mit",
+	"autoload": {
+		"psr-4": {
+			"Raven\\": "src/"
+		}
+	},
+	"minimum-stability": "dev"
+}

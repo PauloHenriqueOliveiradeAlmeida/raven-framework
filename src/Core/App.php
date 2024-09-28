@@ -11,7 +11,7 @@ class App
 {
 	public function __construct(AppConfig $appConfig)
 	{
-		$envFile = file(__DIR__ . '/../../../../.env');
+		$envFile = file(__DIR__ . '/../../../../../.env');
 
 		if ($envFile) {
 			foreach ($envFile as $line) {

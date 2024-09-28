@@ -4,7 +4,7 @@ namespace Raven;
 
 class Cli
 {
-	private const appDir = __DIR__ . "/../../../app";
+	private const appDir = __DIR__ . "/../../../../app";
 
 	public function start(?int $port = null)
 	{

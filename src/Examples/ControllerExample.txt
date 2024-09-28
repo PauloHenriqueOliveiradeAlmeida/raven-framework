@@ -1,0 +1,64 @@
+<?php
+
+namespace App\Api\{$name};
+
+use Raven\Falcon\Attributes\Controller;
+use Raven\Falcon\Attributes\HttpMethods\Post;
+use Raven\Falcon\Attributes\HttpMethods\Put;
+use Raven\Falcon\Attributes\HttpMethods\Patch;
+use Raven\Falcon\Attributes\HttpMethods\Get;
+use Raven\Falcon\Attributes\HttpMethods\Delete;
+use Raven\Falcon\Http\Response;
+
+#[Controller(endpoint: '/api/{$originalName}')]
+class {$name}Controller
+{
+
+	#[Post]
+	public function create()
+	{
+		return Response::sendBody([
+			"Created" => true
+		]);
+	}
+
+	#[Put(endpoint: ':id')]
+	public function update(int $id)
+	{
+		return Response::sendBody([
+			"Updated {$name} with id" => $id
+		]);
+	}
+
+	#[Patch(endpoint: ':id')]
+	public function partialUpdate(int $id)
+	{
+		return Response::sendBody([
+			"Updated partially {$name} with id" => $id
+		]);
+	}
+
+	#[Get]
+	public function getAll()
+	{
+		return Response::sendBody([
+			"Searched all {$name}" => true
+		]);
+	}
+
+	#[Get(endpoint: ':id')]
+	public function getOne(int $id)
+	{
+		return Response::sendBody([
+			"Searched {$name} with id" => $id
+		]);
+	}
+
+	#[Delete(endpoint: ':id')]
+	public function delete(int $id)
+	{
+		return Response::sendBody([
+			"Deleted {$name} with id" => $id
+		]);
+	}
+}

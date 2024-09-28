@@ -9,7 +9,7 @@
 			"Raven\\": "src/"
 		},
 		"classmap": [
-			"vendor/raven/src/Quail/Builders/OpenApiDocument.php"
+			"src/Quail/Builders/OpenApiDocument.php"
 		]
 	},
 	"minimum-stability": "dev"

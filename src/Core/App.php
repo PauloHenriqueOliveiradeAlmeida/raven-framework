@@ -11,9 +11,10 @@ class App
 {
   public function __construct(AppConfig $appConfig)
   {
-    $envFile = file(__DIR__ . '/../../../../../.env');
+    $envFileExists = file_exists(__DIR__ . '/../../../../../.env');
 
-    if ($envFile) {
+    if ($envFileExists && getenv('ENVIROMENT') !== 'production') {
+      $envFile = file(__DIR__ . '/../../../../../.env');
       foreach ($envFile as $line) {
         if (trim($line) === '' || trim($line)[0] === '#') continue;
 

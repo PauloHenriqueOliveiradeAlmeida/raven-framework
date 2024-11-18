@@ -75,7 +75,7 @@ final class RouteHandler
 
 
     header("Access-Control-Allow-Origin: *");
-    header("Access-Control-Allow-Methods: " + implode(',', $this->appConfig->methodsAllowed));
+    header("Access-Control-Allow-Methods: " . implode(',', $this->appConfig->methodsAllowed));
     header("Access-Control-Allow-Headers: Content-Type, Authorization, Content-Length, X-Requested-With");
 
     if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
